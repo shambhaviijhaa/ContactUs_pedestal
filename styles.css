@@ -1,0 +1,204 @@
+:root {
+    --primary-color: rgb(7, 41, 165);
+    --secondary-color: rgb(200, 198, 211);
+    --background-color: rgb(219, 234, 247);
+    --text-color: black;
+    --footer-background: rgb(213, 221, 228);
+    --footer-text-color: grey;
+    --link-hover-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.contact-box h1 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.contact-box h3 {
+    margin: 0;
+    color: #797979;
+    margin-top: 5px;
+}
+
+#box1:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.8); /* Blue shadow */
+}
+
+#box2:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 0, 0.8); /* Yellow shadow */
+}
+
+#box3:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.8); /* Red shadow */
+}
+
+.mail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 15%;
+}
+
+.mail-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.mail-link:hover {
+    color: var(--link-hover-color);
+}
+
+.mail-icon {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px; /* Adjusted margin for spacing */
+}
+
+.mail-text {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    max-width: 100%; /* Ensures text doesn't overflow */
+    box-sizing: border-box;
+}
+
+.address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.address-text {
+    flex: 1;
+    text-align: center;
+    margin: 10px; /* Adjusted margin for spacing */
+}
+
+.address-text h1 {
+    margin: 0;
+}
+
+.address-text p {
+    margin: 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px; /* Ensures map does not exceed container width */
+}
+
+.loc-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px; /* Adjusted margin for spacing */
+    margin-bottom: 10px;
+}
+
+iframe {
+    border: 0;
+    width: 100%; /* Makes the map responsive */
+    height: 400px; /* Adjusted height */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .contact-box {
+        padding: 15px;
+        flex-direction: column; /* Stacks elements vertically */
+        align-items: flex-start; /* Aligns items to the start */
+    }
+
+    .text-container {
+        margin-left: 0; /* Removes left margin on smaller screens */
+        margin-bottom: 20px; /* Adds spacing between text and mail-container */
+    }
+
+    .mail-container {
+        margin-right: 0; /* Removes right margin on smaller screens */
+    }
+
+    .mail-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .loc-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .text-container {
+        margin-left: 0;
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    .mail-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .loc-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}
