@@ -6,7 +6,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../ContactUs_pedestal/assets/images/headerImage.jpg') no-repeat center center fixed;  /* Background image */
+    background: url('./assets/images/headerImage.jpg') no-repeat center center fixed;  /* Background image */
     background-size: cover;  /* Cover the entire background */
     color: white;  /* Text color */
 }
